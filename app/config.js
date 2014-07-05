@@ -6,8 +6,8 @@ var db = Bookshelf.initialize({
   connection: {
     host: '127.0.0.1',
     user: 'your_database_user',
-    password: 'password',
-    database: 'shortlydb',
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
     charset: 'utf8',
     filename: path.join(__dirname, '../db/shortly.sqlite')
   }
