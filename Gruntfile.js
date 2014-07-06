@@ -16,7 +16,6 @@ module.exports = function(grunt) {
       },
     },
 
-
     mochaTest: {
       test: {
         options: {
@@ -33,11 +32,21 @@ module.exports = function(grunt) {
     },
 
     uglify: {
+      options: {
+        mangle: true
+      },
+      my_target: {
+        files: {
+          'public/client/main.min.js': ['public/client/main.js'],
+          'public/lib/lib.min.js': ['public/lib/lib.js']
+        }
+      }
     },
 
     jshint: {
       files: [
-        // Add filespec list here
+        'public/client/main.min.js',
+        'app/**/*.js'
       ],
       options: {
         force: 'true',
@@ -102,7 +111,7 @@ module.exports = function(grunt) {
   ////////////////////////////////////////////////////
 
   grunt.registerTask('default', [
-    'concat', 'nodemon'
+    'concat', 'uglify', 'jsint', 'nodemon'
   ]);
 
   grunt.registerTask('test', [

@@ -38,9 +38,7 @@ window.Shortly = Backbone.View.extend({
       .addClass('selected');
   }
 });
-;
-
-Shortly.Link = Backbone.Model.extend({
+;Shortly.Link = Backbone.Model.extend({
   urlRoot: '/links'
 });
 ;Shortly.Links = Backbone.Collection.extend({
