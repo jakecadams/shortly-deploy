@@ -10,7 +10,7 @@
     "knex": "~0.5.7",
     "bookshelf": "~0.6.4",
     "sqlite3": "~2.2.0",
-    "express": "~3.4.8",
+    "express": "~4.17.1",
     "express-partials": "~0.2.0",
     "ejs": "~0.8.5",
     "mocha": "^1.17.1",
